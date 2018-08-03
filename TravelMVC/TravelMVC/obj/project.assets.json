@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v2.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Sid\\.nuget\\packages\\": {},
+    "C:\\Users\\RIDDHI\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WebDev\\Assignments\\TravelP\\Trip-Planner\\TravelMVC\\TravelMVC\\TravelMVC.csproj",
+      "projectUniqueName": "C:\\Users\\RIDDHI\\Desktop\\Web-Dev-Repo\\Trip-Planner\\TravelMVC\\TravelMVC\\TravelMVC.csproj",
       "projectName": "TravelMVC",
-      "projectPath": "D:\\WebDev\\Assignments\\TravelP\\Trip-Planner\\TravelMVC\\TravelMVC\\TravelMVC.csproj",
-      "packagesPath": "C:\\Users\\Sid\\.nuget\\packages\\",
-      "outputPath": "D:\\WebDev\\Assignments\\TravelP\\Trip-Planner\\TravelMVC\\TravelMVC\\obj\\",
+      "projectPath": "C:\\Users\\RIDDHI\\Desktop\\Web-Dev-Repo\\Trip-Planner\\TravelMVC\\TravelMVC\\TravelMVC.csproj",
+      "packagesPath": "C:\\Users\\RIDDHI\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\RIDDHI\\Desktop\\Web-Dev-Repo\\Trip-Planner\\TravelMVC\\TravelMVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Sid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\RIDDHI\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
