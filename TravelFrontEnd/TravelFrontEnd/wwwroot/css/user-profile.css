@@ -1,0 +1,340 @@
+﻿
+body {
+    background-color: #dedede;
+}
+
+.topbar {
+    background: #2A3F54;
+    border-color: #2A3F54;
+    border-radius: 0px;
+}
+
+    .topbar .navbar-header a {
+        color: #ffffff;
+    }
+
+.wrapper {
+    padding-left: 0px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.sidebar {
+    z-index: 1000;
+    position: fixed;
+    top: 50px;
+    left: -50px;
+    width: 50px;
+    height: 100%;
+    overflow-y: auto;
+    background: #2A3F54;
+    color: #ffffff;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.main {
+    width: 100%;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.wrapper.toggled {
+    padding-left: 50px;
+}
+
+    .wrapper.toggled .sidebar {
+        left: 0;
+    }
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 52px;
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+    .sidebar-nav li {
+        line-height: 40px;
+    }
+
+        .sidebar-nav li a {
+            display: block;
+            text-decoration: none;
+            color: #e8e8e8;
+            padding: 0;
+            text-align: center;
+        }
+
+            .sidebar-nav li a:hover, .sidebar-nav li.active a {
+                text-decoration: none;
+                color: #fff;
+                background: #fff;
+                background: rgba(255,255,255,0.2);
+            }
+
+            .sidebar-nav li a:active,
+            .sidebar-nav li a:focus {
+                text-decoration: none;
+            }
+
+        .sidebar-nav li span, .subbar li span {
+            display: none;
+        }
+
+nav.subbar {
+    position: relative;
+    width: 100%;
+    border-radius: 0px;
+    background: #fff;
+    margin: 50px 0 -50px 0;
+    padding: 10px 0 0 0;
+    z-index: 2;
+}
+
+    nav.subbar > ul.nav.nav-tabs {
+        padding: 0 5px;
+    }
+
+        nav.subbar > ul.nav.nav-tabs > li.active > a {
+            background: #dedede;
+            border-top: 1px solid #a6a6a6;
+            border-left: 1px solid #a6a6a6;
+            border-right: 1px solid #a6a6a6;
+            border-radius: 0px;
+        }
+
+.content {
+    margin-top: 70px;
+    padding: 0 30px;
+}
+
+@media(min-width:768px) {
+    .subbar li span {
+        display: inline;
+    }
+}
+
+@media(min-width:992px) {
+    .wrapper {
+        padding-left: 50px;
+    }
+
+    .sidebar {
+        left: 0;
+        width: 50px;
+    }
+
+    .wrapper.toggled {
+        padding-left: 200px;
+    }
+
+        .wrapper.toggled .sidebar, .wrapper.toggled .sidebar-nav {
+            width: 200px;
+        }
+
+            .wrapper.toggled .sidebar-nav li a {
+                text-align: left;
+                padding: 0 0 0 10px;
+            }
+
+            .wrapper.toggled .sidebar-nav li span {
+                display: inline;
+            }
+}
+
+.navbar-btn {
+    background: none;
+    border: none;
+    height: 35px;
+    min-width: 35px;
+    color: #fff;
+}
+
+.navbar-text {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+@media (min-width: 768px) {
+    .navbar-text {
+        float: left;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+
+
+.flipcard {
+    position: relative;
+    width: 220px;
+    height: 160px;
+    perspective: 500px;
+    margin-bottom: 5%;
+    margin-left: 6%;
+}
+
+    .flipcard.v:hover .front, .flipcard.v.flip .front {
+        transform: rotateX(180deg);
+    }
+
+    .flipcard.v:hover .back, .flipcard.v.flip .back {
+        transform: rotateX(0deg);
+    }
+
+    .flipcard.v .back {
+        transform: rotateX(-180deg);
+    }
+
+    .flipcard.h:hover .front, .flipcard.h.flip .front {
+        transform: rotateY(180deg);
+    }
+
+    .flipcard.h:hover .back, .flipcard.h.flip .back {
+        transform: rotateY(0deg);
+    }
+
+    .flipcard.h .back {
+        transform: rotateY(-180deg);
+    }
+
+    .flipcard .front, .flipcard .back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        transition: all 0.5s ease-in;
+        color: white;
+        background-color: #000;
+        padding: 10px;
+        margin-left: 60%;
+        backface-visibility: hidden;
+    }
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+    .container img {
+        width: 100%;
+        height: auto;
+    }
+
+    .container .btn {
+        position: relative;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        background-color: #f1f1f1;
+        color: black;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+
+
+#destinationLike {
+    background-color: black;
+    color: white;
+    height: 40px;
+    width: 100px;
+    margin: 20px -50px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+}
+
+    #destinationLike:hover {
+        background-color: #2CD892;
+        color: white;
+    }
+
+.container .btnView {
+    border: 1px;
+}
+
+
+button {
+    height: 50px;
+    width: 150px;
+    margin: 60px 0px;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    bottom: 20%;
+    right: 20%;
+}
+
+
+.container .btn:hover {
+    background-color: #2CD892;
+    color: white;
+}
+
+#search {
+    border-radius: 15px;
+    padding: 20px;
+    width: 200px;
+    height: 20px;
+    border-color: gray;
+}
+
+
+
+.container {
+    position: relative;
+    font-family: Arial;
+}
+
+.text-block {
+    opacity: 0.8;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    left: 15%;
+    background-color: white;
+    color: black;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 15%;
+    margin-right: 8%;
+    margin-left: 10%;
+}
+
+
+    .text-block h4 {
+        align-content: center;
+        text-align: center;
+    }
+
+
+.card-btn {
+    margin-bottom: 2%;
+    margin-right: 20%;
+}
+
+
+.card-content div {
+    text-align: justify;
+    text-justify: inter-word;
+    margin: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.modal-title {
+    align: center;
+}
