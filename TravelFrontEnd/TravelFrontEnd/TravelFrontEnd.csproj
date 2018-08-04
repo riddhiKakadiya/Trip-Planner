@@ -5,7 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Home\login.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="wwwroot\js\jquery.cookie.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Views\Home\login.xaml" />
   </ItemGroup>
 
   <ItemGroup>

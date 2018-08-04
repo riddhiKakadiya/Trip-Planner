@@ -1,4 +1,7 @@
-﻿@{
+﻿@{ 
+    Layout = "";
+}
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -56,6 +59,7 @@
 
         <script>
             // Get the modal
+            debugger
             var modal = document.getElementById('id01');
 
             // When the user clicks anywhere outside of the modal, close it
@@ -128,7 +132,7 @@
                                         </div>
                                         <div class="back">
                                             <div class="container">
-                                                <button class="btn" id="dataButton" onclick="window.location.href='login.html'" style="width:auto;">Login/Register</button>
+                                                <button class="btn" id="dataButton" onclick="window.location.href='@Url.Action("login","Home")'" style="width:auto;">Login/Register</button>
                                             </div>
                                         </div>
                                     </div>

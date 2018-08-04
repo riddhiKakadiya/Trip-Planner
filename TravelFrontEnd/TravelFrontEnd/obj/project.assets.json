@@ -12668,11 +12668,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RIDDHI\\Desktop\\TravelFrontEnd\\TravelFrontEnd\\TravelFrontEnd.csproj",
+      "projectUniqueName": "C:\\Users\\RIDDHI\\Desktop\\Project repository\\Trip-Planner\\TravelFrontEnd\\TravelFrontEnd\\TravelFrontEnd.csproj",
       "projectName": "TravelFrontEnd",
-      "projectPath": "C:\\Users\\RIDDHI\\Desktop\\TravelFrontEnd\\TravelFrontEnd\\TravelFrontEnd.csproj",
+      "projectPath": "C:\\Users\\RIDDHI\\Desktop\\Project repository\\Trip-Planner\\TravelFrontEnd\\TravelFrontEnd\\TravelFrontEnd.csproj",
       "packagesPath": "C:\\Users\\RIDDHI\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RIDDHI\\Desktop\\TravelFrontEnd\\TravelFrontEnd\\obj\\",
+      "outputPath": "C:\\Users\\RIDDHI\\Desktop\\Project repository\\Trip-Planner\\TravelFrontEnd\\TravelFrontEnd\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
