@@ -20,7 +20,26 @@ namespace TravelFrontEnd.Controllers
             return View();
         }
 
-        
+        public IActionResult adminProfile()
+        {
+            return View();
+        }
+
+        public IActionResult eventmanagerProfile()
+        {
+            return View();
+        }
+
+        public IActionResult profile()
+        {
+            return View();
+        }
+
+        public IActionResult userProfile()
+        {
+            return View();
+        }
+
 
         public IActionResult Error()
         {
