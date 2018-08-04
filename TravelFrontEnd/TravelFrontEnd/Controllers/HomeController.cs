@@ -40,9 +40,11 @@ namespace TravelFrontEnd.Controllers
             return View();
         }
 
-
-
         public IActionResult ownerProfile()
+        {
+            return View();
+        }
+        public IActionResult eventmangerProfile()
         {
             return View();
         }
