@@ -20,3 +20,14 @@ C:\Users\RIDDHI\Desktop\Project repository\Trip-Planner\TravelFrontEnd\TravelFro
 C:\Users\RIDDHI\Desktop\Project repository\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.AssemblyInfo.cs
 C:\Users\RIDDHI\Desktop\Project repository\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.dll
 C:\Users\RIDDHI\Desktop\Project repository\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.pdb
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.deps.json
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.runtimeconfig.json
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.runtimeconfig.dev.json
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.dll
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.pdb
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.csprojAssemblyReference.cache
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.csproj.CoreCompileInputs.cache
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.AssemblyInfoInputs.cache
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.AssemblyInfo.cs
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.dll
+D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.pdb
