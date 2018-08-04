@@ -1,4 +1,7 @@
-﻿<html>
+﻿@{
+    Layout = "";
+}
+<html>
 <head>
 
     <environment names="Development">
@@ -19,26 +22,26 @@
         <script type="text/javascript" src="~/js/authenticate.js"></script>
 
         <!--if u remove from script..uncomment this
-    <script type="text/javascript" src="~/js/update-user.js"></script>
-    -->
+        <script type="text/javascript" src="~/js/update-user.js"></script>
+        -->
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
         <meta charset="utf-8" />
 
 
     </environment>
-            
-            <style>
-                img {
-                    width: 40px;
-                    height: 100%;
-                }
 
-                .flipcard .front,
-                .flipcard .back {
-                    margin-left: 18%;
-                }
-            </style>
-            <script>
+    <style>
+        img {
+            width: 40px;
+            height: 100%;
+        }
+
+        .flipcard .front,
+        .flipcard .back {
+            margin-left: 18%;
+        }
+    </style>
+    <script>
                 // Get the modal
                 function pageReload() {
                     location.reload();
@@ -99,7 +102,7 @@
 
                 }
 
-            </script>
+    </script>
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top topbar">
@@ -132,7 +135,7 @@
 
                     <li class="dropdown">
                         <button class="navbar-btn" data-toggle="dropdown">
-                            <img src="../Images/jay.jpg" class="img-circle" style="margin-right:80px;">
+                            <img src="~/images/user.png" class="img-circle" style="margin-right:80px;">
 
                         </button>
                         <ul class="dropdown-menu">
