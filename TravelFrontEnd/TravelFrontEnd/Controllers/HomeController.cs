@@ -41,6 +41,13 @@ namespace TravelFrontEnd.Controllers
         }
 
 
+
+        public IActionResult ownerProfile()
+        {
+            return View();
+        }
+
+
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
