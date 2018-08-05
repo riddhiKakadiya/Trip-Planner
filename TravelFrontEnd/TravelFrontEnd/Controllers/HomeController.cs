@@ -44,11 +44,6 @@ namespace TravelFrontEnd.Controllers
         {
             return View();
         }
-        public IActionResult eventmangerProfile()
-        {
-            return View();
-        }
-
 
         public IActionResult Error()
         {
