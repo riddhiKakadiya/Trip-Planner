@@ -1,349 +1,307 @@
 ﻿@{
     Layout = "";
 }
+
 <html>
 <head>
 
     <environment names="Development">
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="~/css/home.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCecXasuZCys5afeG5HLBhbqSG4ndWiWf8&libraries=places" async defer></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="~/js/profile.js"></script>
-        <script type="text/javascript" src="~/js/update.js"></script>
-        <script type="text/javascript" src="~/js/owner-search.js"></script>
-        <script type="text/javascript" src="~/js/likes.js"></script>
-        <script type="text/javascript" src="~/js/reviews.js"></script>
-        <script type="text/javascript" src="~/js/jquery.cookie.js"></script>
-        <script type="text/javascript" src="~/js/authenticate.js"></script>
-        <script type="text/javascript" src="~/js/update-user.js"></script>
-
+        <script src="~/js/profile.js"></script>
+        <script src="~/js/owner-search.js"></script>
+        <script src="~/js/update.js"></script>
+        <script src="~/js/reviews.js"></script>
+        <script src="~/js/likes.js"></script>
+        <link href="~/css/user-profile.css" rel="stylesheet">
+        <script src="~/js/jquery.cookie.js"></script>
         <meta charset="utf-8" />
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-
+        <script src="~/js/authenticate.js"></script>
+        <script src="~/js/update-user.js"></script>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="~/css/home.css">
 
 
     </environment>
+        
+        <style>
 
-    <style>
-        img {
-            width: 40px;
-            height: 100%;
-        }
+            img {
+                width: 40px;
+                height: 100%;
+            }
 
-        .container .btn {
-            width: 100%;
-        }
+            .container .btn {
+                width: 100%;
+            }
 
 
-        .flipcard .front,
-        .flipcard .back {
-            width: 200%;
-            height: 120%;
-            margin-left: 150%;
-            border-radius: 2%;
-        }
-    </style>
-    <script>
-        // Get the modal
-        function pageReload() {
-            location.reload();
-        }
+            .flipcard .front,
+            .flipcard .back {
+                width: 200%;
+                height: 120%;
+                margin-left: 150%;
+                border-radius: 2%;
+            }
+        </style>
+        <script>
+            // Get the modal
+            function pageReload() {
+                location.reload();
+            }
 
-    </script>
-</head>
-<body>
-    <nav class="navbar navbar-default navbar-fixed-top topbar">
-        <div class="container-fluid">
-
-            <div class="navbar-header">
-
-                <a href="#" class="navbar-brand">
-                    <span class="visible-xs">KL</span>
-                    <span class="hidden-xs"><b>Owner</b></span>
-                </a>
-
-                <p class="navbar-text">
-                    <a href="#" class="sidebar-toggle">
-                        <i class="fa fa-bars"></i>
+        </script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top topbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" class="navbar-brand">
+                        <span class="visible-xs">KL</span>
+                        <span class="hidden-xs"><b>Lokesh Rahul</b></span>
                     </a>
-                </p>
-
+                    <p class="navbar-text">
+                        <a href="#" class="sidebar-toggle">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    </p>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-collapse-main">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <button class="navbar-btn">
+                                <i class="fa fa-bell"></i>
+                            </button>
+                        </li>
+                        <li class="dropdown">
+                            <button class="navbar-btn" data-toggle="dropdown">
+                                <img src="~/images/user.jpg" class="img-circle" style="margin-right:80px;">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Account</a></li>
+                                <li><a href="#">Dashboard</a></li>
+                                <li class="nav-divider"></li>
+                                <li><a href="#" onclick="logout()">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="navbar-collapse collapse" id="navbar-collapse-main">
-
-                <ul class="nav navbar-nav navbar-right">
-
-                    <li>
-                        <button class="navbar-btn">
-                            <i class="fa fa-bell"></i>
-                        </button>
-                    </li>
-
-                    <li class="dropdown">
-                        <button class="navbar-btn" data-toggle="dropdown">
-                            <img src="~/images/owner.png" class="img-circle" style="margin-right:80px;">
-
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Account</a></li>
-                            <li><a href="#">Dashboard</a></li>
-                            <li class="nav-divider"></li>
-                            <li><a href="#" onclick="logout()">Logout</a></li>
-                        </ul>
-                    </li>
-
+        </nav>
+        <article class="wrapper">
+            <aside class="sidebar">
+                <ul class="sidebar-nav">
+                    <li class="active"><a href="#dashboard" data-toggle="tab"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+                    <li><a href="#configuration" data-toggle="tab"><i class="fa fa-cogs"></i> <span>Configuration</span></a></li>
+                    <li><a href="#users" data-toggle="tab"><i class="fa fa-users"></i> <span>Users</span></a></li>
+                    <li><a href="#mail" data-toggle="tab"><i class="fa fa-envelope"></i> <span>Mail</span></a></li>
                 </ul>
-
-            </div>
-        </div>
-    </nav>
-
-    <article class="wrapper">
-
-        <aside class="sidebar">
-            <ul class="sidebar-nav">
-                <li class="active"><a href="#dashboard" data-toggle="tab"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-                <li><a href="#configuration" data-toggle="tab"><i class="fa fa-cogs"></i> <span>Configuration</span></a></li>
-                <li><a href="#users" data-toggle="tab"><i class="fa fa-users"></i> <span>Users</span></a></li>
-                <li><a href="#mail" data-toggle="tab"><i class="fa fa-envelope"></i> <span>Mail</span></a></li>
-            </ul>
-        </aside>
-
-        <section class="main">
-
-            <section class="tab-content">
-
-                <section class="tab-pane active fade in content" id="dashboard">
-
-                    <div class="row">
-
-                        <div class="col-xs-12 col-sm-12">
-                            <div class="panel panel-primary">
-                                <div class="panel-body">
-                                    <div class="flipcard h">
-                                        <div class="front">
-                                            <img src="http://triposaur.com/wp-content/uploads/2017/06/10-travel-destinations-that-are-trending-right-now.jpg" alt="Snow" style="width:100%">
-                                            <div class="text-block">
-                                                <h4>Get My Destinatoins</h4>
+            </aside>
+            <section class="main">
+                <section class="tab-content">
+                    <section class="tab-pane active fade in content" id="dashboard">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="panel panel-primary">
+                                    <div class="panel-body">
+                                        <div class="flipcard h">
+                                            <div class="front">
+                                                <img src="http://triposaur.com/wp-content/uploads/2017/06/10-travel-destinations-that-are-trending-right-now.jpg" alt="Snow" style="width:100%">
+                                                <div class="text-block">
+                                                    <h4>Get My Destinatoins</h4>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="back">
-                                            <div class="container">
-                                                <button class="btn" id="dataButton" onclick="getMyDestinations()" style="width:auto;">Get My Destinatoins</button>
+                                            <div class="back">
+                                                <div class="container">
+                                                    <button class="btn" id="dataButton" onclick="getMyDestinations()" style="width:auto;">Get My Destinatoins</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
+
+
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <p><h3>Search Results</h3></p>
+                                    </div>
+                                    <div class="panel-body">
+                                        <input type="text" id="search" style="width:100%;" placeholder="Search data here">
+                                        <div id="tableDiv" style="margin-top: 40px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-
-
-
-
-                        <div class="col-xs-12 col-sm-12">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <p><h3>Search Results</h3></p>
-                                </div>
-                                <div class="panel-body">
-                                    <input type="text" id="search" style="width:100%;" placeholder="Search data here"></input>
-                                    <div id="tableDiv" style="margin-top: 40px">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                    </div>
-
-                </section>
-
-                <section class="tab-pane fade" id="configuration">
-                    <nav class="subbar">
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a href="#access" data-toggle="tab"><i class="fa fa-code"></i> <span>System</span></a></li>
-                            <li><a href="#roles" data-toggle="tab"><i class="fa fa-user"></i> <span>Roles</span></a></li>
-                        </ul>
-                    </nav>
-
-                    <section class="tab-content content">
-
-                        <section class="tab-pane active fade in" id="access">
-
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            Something
-                                        </div>
-                                        <div class="panel-body">
-                                            <br /><br /><br /><br />
+                    </section>
+                    <section class="tab-pane fade" id="configuration">
+                        <nav class="subbar">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#access" data-toggle="tab"><i class="fa fa-code"></i> <span>System</span></a></li>
+                                <li><a href="#roles" data-toggle="tab"><i class="fa fa-user"></i> <span>Roles</span></a></li>
+                            </ul>
+                        </nav>
+                        <section class="tab-content content">
+                            <section class="tab-pane active fade in" id="access">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Something
+                                            </div>
+                                            <div class="panel-body">
+                                                <br /><br /><br /><br />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            Something
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Something
+                                            </div>
+                                            <div class="panel-body">
+                                                <br /><br /><br /><br />
+                                            </div>
                                         </div>
-                                        <div class="panel-body">
-                                            <br /><br /><br /><br />
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Something
+                                            </div>
+                                            <div class="panel-body">
+                                                <br /><br /><br /><br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Something
+                                            </div>
+                                            <div class="panel-body">
+                                                <br /><br /><br /><br />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            Something
+                            </section>
+                            <section class="tab-pane fade" id="roles">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-8 col-md-9">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Something
+                                            </div>
+                                            <div class="panel-body">
+                                                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                                            </div>
                                         </div>
-                                        <div class="panel-body">
-                                            <br /><br /><br /><br />
+                                    </div>
+                                    <div class="hidden-xs col-sm-4 col-md-3">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Something
+                                            </div>
+                                            <div class="panel-body">
+                                                <br /><br /><br />
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                Something
+                                            </div>
+                                            <div class="panel-body">
+                                                <br /><br /><br />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            Something
-                                        </div>
-                                        <div class="panel-body">
-                                            <br /><br /><br /><br />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section class="tab-pane fade" id="roles">
-
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-8 col-md-9">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            Something
-                                        </div>
-                                        <div class="panel-body">
-                                            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="hidden-xs col-sm-4 col-md-3">
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            Something
-                                        </div>
-                                        <div class="panel-body">
-                                            <br /><br /><br />
-                                        </div>
-                                    </div>
-
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            Something
-                                        </div>
-                                        <div class="panel-body">
-                                            <br /><br /><br />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </section>
                         </section>
                     </section>
+                    <section class="tab-pane fade" id="users"></section>
+                    <section class="tab-pane fade" id="mail"></section>
                 </section>
-                <section class="tab-pane fade" id="users"></section>
-                <section class="tab-pane fade" id="mail"></section>
             </section>
-        </section>
-    </article>
-    <div class="modal fade product_view" id="product_view">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
-                    <h3 class="modal-title"></h3>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 product_img">
-                            <img id="destinationImage" style="height: 30%; width: 100%;"
-                                 class="img-responsive">
-                        </div>
-                        <p class="col-md-6 product_content card-content">
-                        <p id="card-rating"></p>
-                        <p id="card-num-reviews"></p>
-                        <p id="card-timings"></p>
-                        <p id="card-price-range"></p>
-
+        </article>
+        <div class="modal fade product_view" id="product_view">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a href="#" data-dismiss="modal" class="class pull-right"><span class="glyphicon glyphicon-remove"></span></a>
+                        <h3 class="modal-title"></h3>
                     </div>
-                </div>
-                <div class="row card-content">
-                    <div><p id="card-address"></p></div>
-                    <div><p id="destinationText"></p></div>
-                </div>
-                <div class="row">
-                    <div class="container">
-                        <button type="button" class="btn" name="" id="getAllReview" onclick=""><b>Reviews</b></button>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6 product_img">
+                                <img id="destinationImage" style="height: 30%; width: 100%;"
+                                     class="img-responsive">
+                            </div>
+                            <p class="col-md-6 product_content card-content">
+                            <p id="card-rating"></p>
+                            <p id="card-num-reviews"></p>
+                            <p id="card-timings"></p>
+                            <p id="card-price-range"></p>
+                        </div>
+                    </div>
+                    <div class="row card-content">
+                        <div><p id="card-address"></p></div>
+                        <div><p id="destinationText"></p></div>
+                    </div>
+                    <div class="row">
+                        <div class="container">
+                            <button type="button" class="btn" name="" id="getAllReview" onclick=""><b>Reviews</b></button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
+        </div>
 
 
-    <div id="id01" class="modal fade product_view">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-              title="Close Modal">&times;</span>
-        <form class="modal-content animate">
-            <div class="container">
-                <h1>Edit Details</h1><hr>
-
-                <b>First Name</b>
-                <input type="text" placeholder="" name="firstname" id="txt_fname" vrequired>
-
-                <b>Last Name</b>
-                <input type="text" placeholder="" name="lname" id="txt_lname" required>
-
-                <b>Phone Number</b>
-                <input type="text" placeholder="" name="phone" id="txt_phone">
-
-                <b>Address</b>
-                <input type="text" placeholder="" name="address" id="txt_address">
-
-                <b>Email</b>
-                <input type="text" placeholder="" name="email" id="txt_email" required>
-
-                <b>Username</b>
-                <input type="text" placeholder="" name="username" id="txt_uname" required>
-
-                <div class="container clearfix">
-                    <div class="row">
-                        <div class="col-xs-6">
-                            <button type="button" onclick="pageReload();" class="btn cancelbtn">
-                                Cancel
-                            </button>
-                        </div>
-                        <div class="col-xs-6">
-                            <button type="submit" id="btn_signup" class="btn signupbtn">Save Details</button>
+        <div id="id01" class="modal fade product_view">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                  title="Close Modal">&times;</span>
+            <form class="modal-content animate">
+                <div class="container">
+                    <h1>Edit Details</h1><hr>
+                    <b>First Name</b>
+                    <input type="text" placeholder="" name="firstname" id="txt_fname" vrequired>
+                    <b>Last Name</b>
+                    <input type="text" placeholder="" name="lname" id="txt_lname" required>
+                    <b>Phone Number</b>
+                    <input type="text" placeholder="" name="phone" id="txt_phone">
+                    <b>Address</b>
+                    <input type="text" placeholder="" name="address" id="txt_address">
+                    <b>Email</b>
+                    <input type="text" placeholder="" name="email" id="txt_email" required>
+                    <b>Username</b>
+                    <input type="text" placeholder="" name="username" id="txt_uname" required>
+                    <div class="container clearfix">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <button type="button" onclick="pageReload();" class="btn cancelbtn">
+                                    Cancel
+                                </button>
+                            </div>
+                            <div class="col-xs-6">
+                                <button type="submit" id="btn_signup" class="btn signupbtn">Save Details</button>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-            </div>
-        </form>
-    </div>
-</body>
+            </form>
+        </div>
+    </body>
 </html>
+
