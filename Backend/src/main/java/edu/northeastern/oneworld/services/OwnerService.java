@@ -12,7 +12,7 @@ import edu.northeastern.oneworld.models.Owner;
 import edu.northeastern.oneworld.repositories.OwnerRepository;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:63342", "http://localhost:63343"})
+@CrossOrigin
 public class OwnerService {
 
 	@Autowired

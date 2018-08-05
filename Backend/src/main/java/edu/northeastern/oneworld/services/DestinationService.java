@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:63342", "http://localhost:63343"})
+@CrossOrigin
 public class DestinationService {
 
     @Autowired

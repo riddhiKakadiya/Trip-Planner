@@ -13,7 +13,7 @@ import edu.northeastern.oneworld.repositories.AdminRepository;
 import edu.northeastern.oneworld.repositories.UserRepository;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:63342", "http://localhost:63343"})
+@CrossOrigin
 public class AdminService {
 
     @Autowired

@@ -31,3 +31,14 @@ D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\
 D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.AssemblyInfo.cs
 D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.dll
 D:\Web Tools\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.pdb
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.deps.json
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.runtimeconfig.json
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.runtimeconfig.dev.json
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.dll
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\bin\Debug\netcoreapp2.0\TravelFrontEnd.pdb
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.csprojAssemblyReference.cache
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.csproj.CoreCompileInputs.cache
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.AssemblyInfoInputs.cache
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.AssemblyInfo.cs
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.dll
+C:\Users\RIDDHI\Desktop\new repo\Trip-Planner\TravelFrontEnd\TravelFrontEnd\obj\Debug\netcoreapp2.0\TravelFrontEnd.pdb
