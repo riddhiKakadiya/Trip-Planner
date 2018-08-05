@@ -12,7 +12,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-        <script type="text/javascript" src="~/js/authenticate.js"></script>
+        <script type="text/javascript"   src="~/js/authenticate.js"></script>
         <script type="text/javascript" src="~/js/hello.js"></script>
      
         <meta charset="utf-8" />
@@ -20,8 +20,80 @@
         <script type="text/javascript" src="~/js/jquery.cookie.js"></script>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="~/css/home1.css">
-    </environment>
 
+        <script>
+            $(document).ready(function () {
+                $('#submit').click(function () {
+
+                    event.preventDefault(); // prevent PageReLoad
+
+                    // console.log(1)
+                    console.log($('#username').val());
+                    console.log($('#password').val());
+
+
+                    var username = $("#username").val().trim();
+                    var password = $("#password").val().trim();
+
+
+
+                    var msg = "";
+                    var object = { username: username, password: password };
+                    var by_pass = 0
+
+
+                    if (username != "" && password != "") {
+                        console.log("In if");
+                        $.ajax({
+                            url: 'http://localhost:8080/api/user/login',
+                            type: 'post',
+                            contentType: "application/json; charset=utf-8",
+                            data: JSON.stringify(object),
+                            success: function (response) {
+
+                                if (response == 1) {
+                                    console.log(response);
+                                    $.cookie("name", username);
+                                    $.cookie("type", response);
+
+                                    window.location.href = '@Url.Action("adminProfile","Home")'
+                                } else if (response == 2) {
+                                    console.log(response);
+                                    $.cookie("name", username);
+                                    $.cookie("type", response);
+
+                                    window.location.href = '@Url.Action("userProfile","Home")';
+                                } else if (response == 3) {
+                                    $.cookie("name", username);
+                                    $.cookie("type", response);
+
+                                    window.location.href = '@Url.Action("ownerProfile","Home")'
+                                } else if (response == 4) {
+                                    $.cookie("name", username);
+                                    $.cookie("type", response);
+
+                                    window.location.href = '@Url.Action("eventmanagerProfile","Home")'
+                                } else {
+                                    msg = "Invalid username and password!";
+                                    console.log(msg);
+
+                                }
+                            }
+                        });
+                    }
+
+                });
+            });
+
+            function logout() {
+                $.cookie('name', '');
+                $.cookie('type', '');
+                window.location.href = '@Url.Action("login","Home")';
+            }
+        </script>
+    </environment>  
+
+    
 
     <script>
         // Get the modal

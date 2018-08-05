@@ -30,7 +30,7 @@
                         // console.log(reviewFunction);
                         $("#getAllReview").attr("onclick", reviewFunction);
                     }
-                });
+                });x`
 
                 $(".modal-title").text(response.name);
                 $("#card-name").text(response.name);
