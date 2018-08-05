@@ -25,7 +25,8 @@
                 success: function (response) {
                     var msg = "";
                     if (response != null) {
-                        window.location = "../public/login.html";
+                        window.location = "../js/login.html";
+                     //   window.location = "@Url.Action("login","Home")";
                     } else {
                         msg = "Invalid username and password!";
                     }
