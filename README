@@ -1,0 +1,16 @@
+This project is an attempt to build a website that enables a user to discover and plan trips for their holidays. Reviews are available 
+from verified reviewers to help so as to the users in deciding the holiday destination. Users can also save their trips or reviews the 
+places they have been to.
+Kinds of users in the system are:
+Administrator: Has authority to create/modify/delete all records
+Owner: Can like/comment on reviews about his/her property  
+User: can review places and follow other users
+Event Manager: can manage trips for other users
+
+The Project Consists of two folders:
+BackEnd: The server side is coded using springboot, JPA. Database is created in MySQL.
+FrontEnd: Client side is written in .NET MVC using HTML, CSS, JavaScript  and JQuery.
+
+Steps to run the project:
+
+1. The environment set-up that you need is : Maven, Tomcat server, JDK, MySQL database, .NET Core, IIS. 
