@@ -30,21 +30,13 @@
                 $('#submit').click(function () {
 
                     event.preventDefault(); // prevent PageReLoad
-
-                    // console.log(1)
                     console.log($('#username').val());
                     console.log($('#password').val());
-
-
                     var username = $("#username").val().trim();
                     var password = $("#password").val().trim();
-
-
-
                     var msg = "";
                     var object = { username: username, password: password };
                     var by_pass = 0
-
 
                     if (username != "" && password != "") {
                         console.log("In if");
