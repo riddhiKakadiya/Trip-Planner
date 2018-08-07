@@ -10,19 +10,18 @@
 
     <environment names="Development">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-        <script type="text/javascript" src="~/js/authenticate.js"></script>
-        <script type="text/javascript" src="~/js/hello.js"></script>
+        <!--- <script type="text/javascript" src="~/js/authenticate.js"></script>
+     <script type="text/javascript" src="~/js/hello.js"></script>-->
 
         <meta charset="utf-8" />
 
         <script type="text/javascript" src="~/js/jquery.cookie.js"></script>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="~/css/home1.css">
-
-        <!------------------------------------SIGN UP----------------------------------->
-        <script>
+    </environment>
+    <!------------------------------------SIGN UP----------------------------------->
+    <script>
         $(document).ready(function () {
         $("#btn_signup").click(function () {
 
@@ -61,9 +60,9 @@
         }
         });
             });
-            </script>
-        <!---------------------------USER AUTHENTICATION-------------------------------->
-        <script>
+    </script>
+    <!---------------------------USER AUTHENTICATION-------------------------------->
+    <script>
             $(document).ready(function () {
                 $('#submit').click(function () {
 
@@ -132,10 +131,10 @@
                 $.cookie('type', '');
                 window.location.href = '@Url.Action("login","Home")';
             }
-        </script>
-    </environment>  
+    </script>
 
-    
+
+
 
     <script>
         // Get the modal

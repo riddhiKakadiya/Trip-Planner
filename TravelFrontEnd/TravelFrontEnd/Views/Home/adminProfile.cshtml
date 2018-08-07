@@ -14,19 +14,141 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="~/js/profile.js"></script>
         <script type="text/javascript" src="~/js/admin-search.js"></script>
-        <script type="text/javascript" src="~/js/update.js"></script>
         <script type="text/javascript" src="~/js/reviews.js"></script>
         <script type="text/javascript" src="~/js/deleteEntity.js"></script>
         <script type="text/javascript" src="~/js/likes.js"></script>
         <link href="~/css/admin-profile.css" rel="stylesheet">
         <script type="text/javascript" src="~/js/jquery.cookie.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
-        <script type="text/javascript" src="~/js/authenticate.js"></script>
-        <script type="text/javascript" src="~/js/update-user.js"></script>
-        <!--<script src="../Scripts/updateUser.js"></script>-->
         <meta charset="utf-8" />
         <link rel="stylesheet" href="~/css/home1.css">
     </environment>
+
+    <!---------------------------USER AUTHENTICATION-------------------------------->
+    <script>
+            $(document).ready(function () {
+                $('#submit').click(function () {
+
+                    event.preventDefault(); // prevent PageReLoad
+
+                    // console.log(1)
+                    console.log($('#username').val());
+                    console.log($('#password').val());
+
+
+                    var username = $("#username").val().trim();
+                    var password = $("#password").val().trim();
+
+
+
+                    var msg = "";
+                    var object = { username: username, password: password };
+                    var by_pass = 0
+
+
+                    if (username != "" && password != "") {
+                        console.log("In if");
+                        $.ajax({
+                            url: 'http://localhost:8080/api/user/login',
+                            type: 'post',
+                            contentType: "application/json; charset=utf-8",
+                            data: JSON.stringify(object),
+                            success: function (response) {
+
+                                if (response == 1) {
+                                    console.log(response);
+                                    $.cookie("name", username);
+                                    $.cookie("type", response);
+
+                                    window.location.href = '@Url.Action("adminProfile","Home")';
+                                } else if (response == 2) {
+                                    console.log(response);
+                                    $.cookie("name", username);
+                                    $.cookie("type", response);
+
+                                    window.location.href = '@Url.Action("userProfile","Home")';
+                                } else if (response == 3) {
+                                    $.cookie("name", username);
+                                    $.cookie("type", response);
+
+                                    window.location.href = '@Url.Action("ownerProfile","Home")';
+                                } else if (response == 4) {
+                                    $.cookie("name", username);
+                                    $.cookie("type", response);
+
+                                    window.location.href = '@Url.Action("eventmanagerProfile","Home")';
+                                } else {
+                                    msg = "Invalid username and password!";
+                                    console.log(msg);
+                                }
+                            }
+                        });
+                    }
+
+                });
+            });
+
+            function logout() {
+                $.cookie('name', '');
+                $.cookie('type', '');
+                window.location.href = '@Url.Action("login","Home")';
+            }
+    </script>
+
+    <!---------------------------------   UPDATE  ---------------------------------------->
+    <script>
+        function update(index) {
+            var buttonId = "#updateButton" + index;
+            var url = 'http://localhost:8080/api/destination/' + (index);
+
+            if ($.cookie("name") === undefined) {
+                window.location.href = '@Url.Action("login","Home")';
+            } else {
+
+                $.ajax({
+                    url: url,
+                    type: 'get',
+                    success: function (response) {
+
+                        var service = new google.maps.places.PlacesService(document.createElement('div'));
+
+                        var request = {
+                            placeId: response.placeId
+                        };
+
+                        var img_url;
+                        service.getDetails(request, function (place, status) {
+                            console.log(status);
+                            if (status == google.maps.places.PlacesServiceStatus.OK) {
+                                console.log(place);
+                                if (place.reviews != undefined)
+                                    $("#card-num-reviews").text(place.reviews.length + " Reviews");
+                                if (place.photos != undefined || place.photos[0] != undefined)
+                                    $("#destinationImage").attr("src", place.photos[0].getUrl({ 'maxWidth': 500, 'maxHeight': 300 }));
+                                var reviewFunction = "getAllReviews(" + JSON.stringify(place) + ");";
+                                $("#getAllReview").attr("onclick", reviewFunction);
+                            }
+                        });
+
+                        $(".modal-title").text(response.name);
+                        $("#card-name").text(response.name);
+                        $("#card-rating").text("Ratings: " + response.rating);
+                        if (response.timings != null) {
+                            $("#card-timings").text(response.timings);
+                        }
+                        if (response.priceRange != 0) {
+                            $("#card-price-range").text(response.priceRange);
+                        }
+                        $("#card-address").text("Address: " + response.name + ", " + response.city + ", " + response.country);
+                        $("#destinationText").text("Rome is the capital of Italy and a special comune Rome also serves as the capital of the Lazio region. " +
+                            "With 2,873,874 residents in 1,285 km2 (496.1 sq mi), it is also the country's most populated comune. " +
+                            "It is the fourth-most populous city in the European Union by population within city limits. ");
+
+                    });
+            }
+        }
+    </script>
+
 
     <style>
 

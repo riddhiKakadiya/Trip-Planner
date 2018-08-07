@@ -2,9 +2,9 @@
     var buttonId = "#updateButton" + index;
     var url = 'http://localhost:8080/api/destination/' + (index + 1);
 
-    if ($.cookie("name") === undefined) {
+    /*if ($.cookie("name") === undefined) {
         window.location.href = "../login.html";
-    } else {
+    } else {*/
         $.ajax({
             url: url,
             type: 'get',
@@ -32,7 +32,7 @@
                     "destinationId": (index + 1)
                 }
                 var reviewFunction = "addToTrips(" + JSON.stringify(toSend) + ");";
-                // var reviewFunction = "addToTrips("+ JSON.stringify(toSend) + ");";
+          
                 $("#addToTrips").attr("onclick", reviewFunction);
 
                 $(".modal-title").text(response.name);
@@ -49,9 +49,8 @@
                     "With 2,873,874 residents in 1,285 km2 (496.1 sq mi), it is also the country's most populated comune. " +
                     "It is the fourth-most populous city in the European Union by population within city limits. ");
 
-                // To do this
+       
             }
         });
-    }
 
 }

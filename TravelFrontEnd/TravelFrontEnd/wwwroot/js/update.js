@@ -30,7 +30,7 @@
                         // console.log(reviewFunction);
                         $("#getAllReview").attr("onclick", reviewFunction);
                     }
-                });x`
+                });
 
                 $(".modal-title").text(response.name);
                 $("#card-name").text(response.name);
@@ -45,10 +45,7 @@
                 $("#destinationText").text("Rome is the capital of Italy and a special comune Rome also serves as the capital of the Lazio region. " +
                     "With 2,873,874 residents in 1,285 km2 (496.1 sq mi), it is also the country's most populated comune. " +
                     "It is the fourth-most populous city in the European Union by population within city limits. ");
-
-                // To do this
             
         });
     }
 
-}
