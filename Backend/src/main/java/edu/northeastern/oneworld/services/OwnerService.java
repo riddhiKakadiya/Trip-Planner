@@ -12,7 +12,7 @@ import edu.northeastern.oneworld.models.Owner;
 import edu.northeastern.oneworld.repositories.OwnerRepository;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = {"*"})
 public class OwnerService {
 
 	@Autowired

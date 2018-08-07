@@ -13,7 +13,7 @@ import edu.northeastern.oneworld.repositories.TripRepository;
 import edu.northeastern.oneworld.repositories.UserRepository;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = {"*"})
 public class UserService {
 
     @Autowired

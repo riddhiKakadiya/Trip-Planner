@@ -13,7 +13,7 @@ import edu.northeastern.oneworld.repositories.AdminRepository;
 import edu.northeastern.oneworld.repositories.UserRepository;
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = {"*"})
 public class AdminService {
 
     @Autowired

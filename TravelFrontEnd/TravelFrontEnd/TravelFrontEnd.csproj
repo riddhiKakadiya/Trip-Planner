@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\authenticate.js" />
     <Content Remove="wwwroot\js\jquery.cookie.css" />
   </ItemGroup>
 
