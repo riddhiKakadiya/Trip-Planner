@@ -1,8 +1,6 @@
 ﻿$(document).ready(function () {
     $("#btn_signup").click(function () {
-
         event.preventDefault();
-
         var fname = $('#txt_fname').val().trim();
         var lname = $('#txt_lname').val().trim();
         var username = $('#txt_uname').val().trim();
