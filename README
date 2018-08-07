@@ -1,0 +1,6 @@
+This project is an attempt to build a website that enables a user to discover and plan trips for their holidays. Reviews are available from  verified reviewers to help so as to the users in deciding the holiday destinations.
+
+The Project Consists of two folders:
+BackEnd: The server side is coded using springboot, JPA. Database is created in MySQL.
+FrontEnd: Client side is written in .NET MVC using HTML, CSS, JavaScript  and JQuery.
+
