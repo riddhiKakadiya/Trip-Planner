@@ -55,9 +55,6 @@
     });
 });
 
-
-
-
 function updateUser(user) {
 
     var url = 'http://localhost:8080/api/user/';

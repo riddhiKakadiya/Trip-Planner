@@ -1,11 +1,15 @@
 This project is an attempt to build a website that enables a user to discover and plan trips for their holidays. Reviews are available 
 from verified reviewers to help so as to the users in deciding the holiday destination. Users can also save their trips or reviews the 
 places they have been to.
+
 Kinds of users in the system are:
 Administrator: Has authority to create/modify/delete all records
 Owner: Can like/comment on reviews about his/her property  
-User: can review places and follow other users
 Event Manager: can manage trips for other users
+User: can review places and follow other users
+
+
+Holiday destinations are obtained by consuming Google Maps API
 
 The Project Consists of two folders:
 BackEnd: The server side is coded using springboot, JPA. Database is created in MySQL.
@@ -14,3 +18,15 @@ FrontEnd: Client side is written in .NET MVC using HTML, CSS, JavaScript  and JQ
 Steps to run the project:
 
 1. The environment set-up that you need is : Maven, Tomcat server, JDK, MySQL database, .NET Core, IIS. 
+2. clone the repository or download zip file of the project
+3. Open MySQL Workbench & connect to the Database (Database has to be created).
+4. Open the TravelFrontEnd in Visual Studio and run the project to start the local front end server on IIS. It runs on URL "http://localhost:5000/"
+5. Open the backend in any IDE and run to start the local backend server on Tomcat.It runs on URL "http://localhost:8080/api/destination"
+
+Features:
+Reviews are available from verified reviewers to help the users in deciding the holiday destination. Users can also save their trips 
+or reviews the places they have been to.
+
+Authors
+----------
+Riddhi Kakadiya, Preetam Jain, Siddhant Nimbalkar

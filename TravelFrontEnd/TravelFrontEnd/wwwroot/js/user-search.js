@@ -43,9 +43,6 @@ function getAllDestinations() {
                 table_body += '<td>';
                 table_body += response[i].destinationType;
                 table_body += '</td>';
-
-
-
                 table_body += '<td>';
 
                 var buttonId = "updateButton" + i;

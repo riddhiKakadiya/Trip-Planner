@@ -12,7 +12,9 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCecXasuZCys5afeG5HLBhbqSG4ndWiWf8&libraries=places" async defer></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCecXasuZCys5afeG5HLBhbqSG4ndWiWf8&libraries=places" async defer></script>-->
+
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-2dGflTXu2tWpMI7krOV71ASUid2CbIU&libraries=places" async defer></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="~/js/profile.js"></script>
         <script src="~/js/eventmanager-search.js"></script>
@@ -135,7 +137,7 @@
                         }
                         $("#card-address").text("Address: " + response.name + ", " + response.city + ", " + response.country);
                         $("#destinationText").text("Rome is the capital of Italy and a special comune Rome also serves as the capital of the Lazio region. " +
-                            "With 2,873,874 residents in 1,285 km2 (496.1 sq mi), it is also the country's most populated comune. " +
+                            "With 2,873,874 residents in 496.1 sq miles, it is also the country's most populated comune. " +
                             "It is the fourth-most populous city in the European Union by population within city limits. ");
                     }
                 });
