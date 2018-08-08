@@ -6,27 +6,27 @@
     <environment names="Development">
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCecXasuZCys5afeG5HLBhbqSG4ndWiWf8&libraries=places" async defer></script>
-
-        <!-- 2<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-2dGflTXu2tWpMI7krOV71ASUid2CbIU&libraries=places" async defer></script> -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript">window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCecXasuZCys5afeG5HLBhbqSG4ndWiWf8&libraries=places" async defer></script>
+        <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-2dGflTXu2tWpMI7krOV71ASUid2CbIU&libraries=places" async defer></script>-->
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="~/js/profile.js"></script>
         <script type="text/javascript" src="~/js/owner-search.js"></script>
         <script type="text/javascript" src="~/js/reviews.js"></script>
         <script type="text/javascript" src="~/js/likes.js"></script>
         <link rel="stylesheet" href="~/css/user-profile.css">
-        <script src="~/js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="~/js/jquery.cookie.js"></script>
+        <script type="text/javascript" src="~/js/update.js"></script>
         <meta charset="utf-8" />
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="~/css/home.css">
-    </environment>
 
-    <!--                          -USER AUTHENTICATION                                  -->
-    <script>
+
+        <!--                          -USER AUTHENTICATION                                  -->
+        <script type="text/javascript">
             $(document).ready(function () {
                 $('#submit').click(function () {
 
@@ -85,11 +85,12 @@
                 $.cookie('type', '');
                 window.location.href = '@Url.Action("login","Home")';
             }
-    </script>
+        </script>
 
-    <!--                                       UPDATE                                      -->
-    <script>
-        function update(index) {
+        <!--                                       UPDATE                                      -->
+       <!--- <script type="text/javascript">
+            function update(index) {
+                console.log("into update function");
             var buttonId = "#updateButton" + index;
             var url = 'http://localhost:8080/api/destination/' + (index);
 
@@ -138,7 +139,9 @@
                     });
             }
         }
-    </script>
+        </script>
+        -->
+    </environment>
 
     <style>
 

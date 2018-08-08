@@ -6,22 +6,23 @@
 
     <environment names="Development">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCecXasuZCys5afeG5HLBhbqSG4ndWiWf8&libraries=places" async defer></script>
-
         <!-- 2<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA-2dGflTXu2tWpMI7krOV71ASUid2CbIU&libraries=places" async defer></script> -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="~/css/home.css" />
         <link rel="stylesheet" href="~/css/user-profile.css">
         <script type="text/javascript" src="~/js/profile.js"></script>
-        <!----<script type="text/javascript" src="~/js/user-search.js"></script>-->
+        <script type="text/javascript" src="~/js/update.js"></script>
+        <script type="text/javascript" src="~/js/update-user.js"></script>
+        <script type="text/javascript" src="~/js/user-search.js"></script>
         <script type="text/javascript" src="~/js/likes.js"></script>
         <script type="text/javascript" src="~/js/reviews.js"></script>
         <script type="text/javascript" src="~/js/jquery.cookie.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
         <meta charset="utf-8" />
     </environment>
     <!--                              -USER AUTHENTICATION                              -->
@@ -88,7 +89,7 @@
     </script>
 
     <!--                                        UPDATE                                  -->
-    <script>
+    <!----<script>
         function update(index) {
             var buttonId = "#updateButton" + index;
             var url = 'http://localhost:8080/api/destination/' + (index);
@@ -139,107 +140,8 @@
                     });
             }
         }
-    </script>
+    </script>-->
 
-    <!--------------------------------UPDATE USER---------------------------------------->
-    <script>
-        $(document).ready(function () {
-            $("#btn_signup").click(function () {
-
-                event.preventDefault();
-
-                var fname = $('#txt_fname').val().trim();
-                var lname = $('#txt_lname').val().trim();
-                var username = $('#txt_uname').val().trim();
-                var address = $('#txt_address').val().trim();
-                var email = $('#txt_email').val().trim();
-                var phone = $('#txt_phone').val().trim();
-                var password = $('#txt_psw').val().trim();
-                var rpt_password = $('#txt_psw-repeat').val().trim();
-
-                if (username != "" && password != "" && password === rpt_password) {
-                    var jsonObj = {
-                        firstName: fname, lastName: lname, phoneNumber: phone,
-                        address: address, email: email, username: username, password: password
-                    };
-                    $.ajax({
-                        url: 'http://localhost:8080/api/user/register',
-                        type: 'post',
-                        contentType: "application/json; charset=utf-8",
-                        data: JSON.stringify(jsonObj),
-                        success: function (response) {
-
-                        }
-                    });
-                }
-            });
-
-            $("#btn_update").click(function () {
-
-                event.preventDefault();
-
-                var fname = $('#txt_fname').val().trim();
-                var lname = $('#txt_lname').val().trim();
-                var username = $('#txt_uname').val().trim();
-                var address = $('#txt_address').val().trim();
-                var email = $('#txt_email').val().trim();
-                var phone = $('#txt_phone').val().trim();
-
-                var jsonObj = {
-                    firstName: fname, lastName: lname, phoneNumber: phone,
-                    address: address, email: email, username: username
-                };
-                $.ajax({
-                    url: 'http://localhost:8080/api/user/5',
-                    type: 'put',
-                    contentType: "application/json; charset=utf-8",
-                    data: JSON.stringify(jsonObj),
-                    success: function (response) {
-                    }
-                });
-            });
-        });
-
-        function updateUser(user) {
-            var url = 'http://localhost:8080/api/user/';
-            var userObj;
-            $.ajax({
-                url: url,
-                type: 'get',
-                data: { username: user },
-                success: function (response) {
-                    userObj = response[0];
-                    $("#txt_fname").attr("value", userObj.firstName);
-                    $("#txt_lname").attr("value", userObj.lastName);
-                    $("#txt_phone").attr("value", userObj.phoneNumber);
-                    $("#txt_address").attr("value", userObj.address);
-                    $("#txt_email").attr("value", userObj.email);
-                    $("#txt_uname").attr("value", userObj.username);
-                }
-            });
-        }
-        function updateOwner(user) {
-            var url = 'http://localhost:8080/api/owner/';
-            var userObj;
-            $.ajax({
-                url: url,
-                type: 'get',
-                data: { username: user },
-                success: function (response) {
-                    userObj = response[0];
-                    $("#txt_fname").attr("value", userObj.firstName);
-                    $("#txt_lname").attr("value", userObj.lastName);
-                    $("#txt_phone").attr("value", userObj.phoneNumber);
-                    $("#txt_address").attr("value", userObj.address);
-                    $("#txt_email").attr("value", userObj.email);
-                    $("#txt_uname").attr("value", userObj.username);
-                }
-            });
-        }
-
-
-
-    </script>
 
     <style>
         img {
@@ -258,56 +160,6 @@
                     location.reload();
                 }
 
-                //-----------   for update  (cookies)  ----------------------------------
-                function update(index) {
-                    var buttonId = "#updateButton" + index;
-                    var url = 'http://localhost:8080/api/destination/' + (index);
-                    //may create problem
-                    if ($.cookie("name") === undefined) {
-                        window.location.href = '@Url.Action("login","Home")';
-                    } else {
-                        $.ajax({
-                            url: url,
-                            type: 'get',
-                            success: function (response) {
-
-                                var service = new google.maps.places.PlacesService(document.createElement('div'));
-
-                                var request = {
-                                    placeId: response.placeId
-                                };
-
-                                var img_url;
-                                service.getDetails(request, function (place, status) {
-                                    console.log(status);
-                                    if (status == google.maps.places.PlacesServiceStatus.OK) {
-                                        console.log(place);
-                                        if (place.reviews != undefined)
-                                            $("#card-num-reviews").text(place.reviews.length + " Reviews");
-                                        if (place.photos != undefined || place.photos[0] != undefined)
-                                            $("#destinationImage").attr("src", place.photos[0].getUrl({ 'maxWidth': 500, 'maxHeight': 300 }));
-                                        var reviewFunction = "getAllReviews(" + JSON.stringify(place) + ");";
-                                        $("#getAllReview").attr("onclick", reviewFunction);
-                                    }
-                                });
-
-                                $(".modal-title").text(response.name);
-                                $("#card-name").text(response.name);
-                                $("#card-rating").text("Ratings: " + response.rating);
-                                if (response.timings != null) {
-                                    $("#card-timings").text(response.timings);
-                                }
-                                if (response.priceRange != 0) {
-                                    $("#card-price-range").text(response.priceRange);
-                                }
-                                $("#card-address").text("Address: " + response.name + ", " + response.city + ", " + response.country);
-                                $("#destinationText").text("Rome is the capital of Italy and a special comune Rome also serves as the capital of the Lazio region. " +
-                                    "With 2,873,874 residents in 1,285 km2 (496.1 sq mi), it is also the country's most populated comune. " +
-                                    "It is the fourth-most populous city in the European Union by population within city limits. ");
-                            }
-                        });
-                    }
-                }
     </script>
 </head>
 
